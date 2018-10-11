@@ -2,5 +2,7 @@ require 'net/http'
 require 'json'
 require 'dotenv/load'
 require './weather'
+require './custom_error'
 
-p Weather.city_weather(ARGV[0])
+city = ARGV.join(" ")
+p Weather.city_weather(city)
